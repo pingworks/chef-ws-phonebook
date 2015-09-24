@@ -1,2 +1,0 @@
-jenkins	ALL = NOPASSWD: /usr/bin/dpkg -i phonebook*
-jenkins	ALL = (gitdaemon) NOPASSWD: /usr/bin/git fetch origin master\:master

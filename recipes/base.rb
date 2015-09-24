@@ -11,13 +11,9 @@ node.force_override['apt']['periodic_update_min_delay'] = 0
 include_recipe 'apt'
 
 package 'software-properties-common'
-
 package 'ruby2.1'
-package 'ruby2.1-dev'
 
-cookbook_file 'sudoers-jenkins' do
-  path '/etc/sudoers.d/jenkins'
-  owner 'root'
-  group 'root'
-  mode '644'
+bash 'install bundler' do
+  code 'gem install bundler'
+  not_if 'test -x /usr/local/bin/bundler'
 end

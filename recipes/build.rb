@@ -12,13 +12,9 @@ include_recipe 'ws-phonebook::base'
 package 'git'
 package 'libssl-dev'
 package 'build-essential'
+package 'ruby2.1-dev'
 
 bash 'install fpm' do
   code 'gem install fpm'
   not_if 'test -x /usr/local/bin/fpm'
-end
-
-bash 'install bundler' do
-  code 'gem install bundler'
-  not_if 'test -x /usr/local/bin/bundler'
 end
