@@ -1,6 +1,7 @@
 #!/bin/bash
 
-URL=$1
+BRANCH=$1
+BUNDLE=$2
 
 if [ -z "$BRANCH" -o -z "$BUNDLE" ]; then
   echo "Usage: $0 <branch> <bundle>"
