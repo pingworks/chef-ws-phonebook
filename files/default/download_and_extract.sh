@@ -1,11 +1,9 @@
 #!/bin/bash
 
-BRANCH=$1
-BUNDLE=$2
-PKGS=$3
+URL=$1
 
-if [ -z "$BRANCH" -o -z "$BUNDLE" -o -z "$PKGS" ]; then
-  echo "Usage: $0 <branch> <bundle> <pkgs>"
+if [ -z "$BRANCH" -o -z "$BUNDLE" ]; then
+  echo "Usage: $0 <branch> <bundle>"
   exit 1
 fi
 
@@ -18,7 +16,3 @@ wget -O full-bundle_${BUNDLE}.tar.gz \
 rm -rf bundle
 mkdir bundle
 tar xvfz full-bundle_${BUNDLE}.tar.gz -C bundle
-cd bundle/artifacts/
-for pkg in $PKGS; do
-  sudo dpkg -i ${pkg}_*.deb
-done
