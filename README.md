@@ -1,4 +1,4 @@
-# ws-phonebook-cookbook
+# ws_phonebook-cookbook
 
 Installs/Configures phonebook
 
@@ -16,7 +16,7 @@ Ubuntu 14.04
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['ws-phonebook']['bacon']</tt></td>
+    <td><tt>['ws_phonebook']['bacon']</tt></td>
     <td>Boolean</td>
     <td>whether to include bacon</td>
     <td><tt>true</tt></td>
@@ -25,14 +25,14 @@ Ubuntu 14.04
 
 ## Usage
 
-### ws-phonebook::default
+### ws_phonebook::default
 
-Include `ws-phonebook` in your node's `run_list`:
+Include `ws_phonebook` in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[ws-phonebook::default]"
+    "recipe[ws_phonebook::default]"
   ]
 }
 ```
@@ -40,4 +40,4 @@ Include `ws-phonebook` in your node's `run_list`:
 ## License and Authors
 
 Author:: Christoph Lukas (<christoph.lukas@gmx.net>)
-# chef-ws-phonebook
+# chef-ws_phonebook

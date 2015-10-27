@@ -1,3 +1,3 @@
 # 0.1.0
 
-Initial release of ws-phonebook
+Initial release of ws_phonebook
